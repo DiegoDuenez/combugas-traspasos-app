@@ -171,6 +171,8 @@ public class NavigationActivity extends AppCompatActivity {
             navigationView.getMenu().getItem(9).setVisible(false);
             navigationView.getMenu().getItem(10).setVisible(false);
             navigationView.getMenu().getItem(11).setVisible(false);
+            navigationView.getMenu().getItem(12).setVisible(false);
+            navigationView.getMenu().getItem(13).setVisible(false);
 
             navigationView.setNavigationItemSelectedListener(item ->{
                 switch (item.getItemId()){
@@ -237,7 +239,8 @@ public class NavigationActivity extends AppCompatActivity {
             navigationView.getMenu().getItem(9).setVisible(false);
             navigationView.getMenu().getItem(10).setVisible(false);
             navigationView.getMenu().getItem(11).setVisible(false);
-
+            navigationView.getMenu().getItem(12).setVisible(false);
+            navigationView.getMenu().getItem(13).setVisible(false);
 
             navigationView.setNavigationItemSelectedListener(item ->{
                 switch (item.getItemId()){
@@ -254,6 +257,61 @@ public class NavigationActivity extends AppCompatActivity {
                         drawer.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.nav_menu_principal:
+                        finish();
+                        break;
+                    case R.id.nav_cerrar_sesion:
+                        Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_LONG).show();
+                        Intent iCerrarSesion = new Intent(NavigationActivity.this, MainActivity.class);
+                        startActivity(iCerrarSesion);
+                        finish();
+                        break;
+                }
+                return true;
+            });
+        }
+        else  if(tipo.equals("yelow")){
+
+            mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_menu_yelow, R.id.nav_menu_principal_yelow, R.id.nav_inventario_yelow)
+                    .setDrawerLayout(drawer)
+                    .build();
+            navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+            NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+            NavigationUI.setupWithNavController(navigationView, navController);
+
+            imageView = navigationView.getHeaderView(0).findViewById(R.id.imageView);
+            textViewMenu = navigationView.getHeaderView(0).findViewById(R.id.textViewHeader);
+            imageView.setImageDrawable(getResources().getDrawable(R.drawable.combu_icon, getApplicationContext().getTheme()));
+            navigationView.getHeaderView(0).setBackgroundColor(getResources().getColor(R.color.blueLight2Yel));
+            textViewMenu.setText("Yelow");
+            toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blueLight2Yel));
+            navigationView.setItemBackground(getResources().getDrawable(R.drawable.yelow_navigation_view_item));
+            navigationView.setItemTextColor(ColorStateList.valueOf(getResources().getColor(R.color.black)));
+            navController.navigate(R.id.nav_menu_yelow, bundleInit);
+
+            navigationView.getMenu().getItem(0).setVisible(false);
+            navigationView.getMenu().getItem(1).setVisible(false);
+            navigationView.getMenu().getItem(2).setVisible(false);
+            navigationView.getMenu().getItem(3).setVisible(false);
+            navigationView.getMenu().getItem(4).setVisible(false);
+            navigationView.getMenu().getItem(5).setVisible(false);
+            navigationView.getMenu().getItem(6).setVisible(false);
+            navigationView.getMenu().getItem(7).setVisible(false);
+            //navigationView.getMenu().getItem(8).setVisible(false);
+            navigationView.getMenu().getItem(0).setChecked(true);
+            navigationView.getMenu().getItem(8).setVisible(false);
+            navigationView.getMenu().getItem(9).setVisible(false);
+            navigationView.getMenu().getItem(10).setVisible(false);
+            navigationView.getMenu().getItem(11).setVisible(false);
+            navigationView.getMenu().getItem(12).setVisible(true);
+            navigationView.getMenu().getItem(13).setVisible(true);
+
+            navigationView.setNavigationItemSelectedListener(item ->{
+                switch (item.getItemId()){
+                    case R.id.nav_menu_yelow:
+                        navController.navigate(R.id.nav_menu_yelow, bundleInit);
+                        drawer.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_menu_principal_yelow:
                         finish();
                         break;
                     case R.id.nav_cerrar_sesion:

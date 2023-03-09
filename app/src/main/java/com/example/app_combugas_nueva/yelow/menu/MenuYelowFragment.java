@@ -25,7 +25,7 @@ public class MenuYelowFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_menu_yelow2, container, false);
+        return inflater.inflate(R.layout.menu_yelow_fragment, container, false);
     }
 
     @Override

@@ -34,6 +34,7 @@
             android:id="@+id/nav_cerrar_sesion_awa"
             android:title="Cerrar sesión" />
 
+
         <!-- VOUCHERS -->
         <item
             android:id="@+id/nav_vouchers_registro"
@@ -51,6 +52,22 @@
 
         <item
             android:id="@+id/nav_cerrar_sesion_vouchers"
+            android:title="Cerrar sesión" />
+
+
+        <!-- YELOW-->
+        <item
+            android:id="@+id/nav_menu_yelow"
+            android:title="Menú"
+            android:checked="true"
+            />
+
+        <item
+            android:id="@+id/nav_menu_principal_yelow"
+            android:title="Menú principal" />
+
+        <item
+            android:id="@+id/nav_cerrar_sesion_yelow"
             android:title="Cerrar sesión" />
 
 

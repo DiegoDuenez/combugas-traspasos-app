@@ -83,7 +83,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     private TextView txtViewEmpleado;
     private TextView txtViewEstacion;
     private TextView txtViewModo;
-    private Button btnTanques, btnGarrafones, btnVouchers;
+    private Button btnTanques, btnGarrafones, btnVouchers, btnYelow;
     private LocationManager locationManager;
     private Location location;
     private Criteria criteria;
@@ -118,6 +118,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         this.txtViewEstacion = findViewById(R.id.textViewEstacion);
         this.btnTanques = findViewById(R.id.btnTanques);
         this.btnGarrafones = findViewById(R.id.btnAwa);
+        this.btnYelow = findViewById(R.id.btnYelow);
         this.btnVouchers = findViewById(R.id.btnVouchers);
         this.txtViewModo = findViewById(R.id.textViewModo);
 
@@ -207,6 +208,19 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 iTanques.putExtra("tipo_empleado", tipo_empleado);
                 iTanques.putExtra("nombre_empleado", nombre_empleado);
                 iTanques.putExtra("tipo", "awa");
+                iTanques.putExtra("id_empleado", id_empleado);
+                startActivity(iTanques);
+            }
+        });
+
+        btnYelow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iTanques = new Intent(MenuPrincipalActivity.this, NavigationActivity.class);
+                iTanques.putExtra("id_estacion", id_estacion);
+                iTanques.putExtra("tipo_empleado", tipo_empleado);
+                iTanques.putExtra("nombre_empleado", nombre_empleado);
+                iTanques.putExtra("tipo", "yelow");
                 iTanques.putExtra("id_empleado", id_empleado);
                 startActivity(iTanques);
             }

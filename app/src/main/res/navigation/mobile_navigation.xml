@@ -76,6 +76,25 @@
         tools:layout="@layout/config_fragment">
     </fragment>
 
+
+    <!--====== SECCION YELOW =======-->
+
+
+
+    <fragment
+        android:id="@+id/nav_menu_yelow"
+        android:name="com.example.app_combugas_nueva.yelow.menu.MenuYelowFragment"
+        android:label="Menú yelow"
+        tools:layout="@layout/menu_yelow_fragment"></fragment>
+
+    <fragment
+        android:id="@+id/nav_inventario_yelow"
+        android:name="com.example.app_combugas_nueva.awa.salida.SalidaAwaFragment"
+        android:label="Recarga yelow"
+        tools:layout="@layout/salida_awa_fragment">
+    </fragment>
+
+
     <!--====== SECCION VOUCHERS =======-->
 
     <fragment
