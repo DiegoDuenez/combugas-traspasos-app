@@ -108,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnAwa" />
 
     <Button
-        android:id="@+id/btnYel"
+        android:id="@+id/btnYellow"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_marginStart="30dp"
@@ -116,7 +116,6 @@
         android:layout_marginEnd="30dp"
         android:backgroundTint="@color/blueLight2Yel"
         android:text="Hielo"
-        android:visibility="invisible"
         android:textColor="#28201d"
         app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -195,7 +195,7 @@ public class MenuAwaFragment extends Fragment {
 
         alertaProgress.content("Cargando inventario", "Por favor espere.").show(false);
 
-        String url = URL.URL_ESTACIONES + "?id_estacion=" +id_estacion;
+        String url = URL.URL_ESTACIONES + "?id_estacion=" +id_estacion+"&funcion=";
         vs = VolleyS.getInstance(getContext());
         requestQueue = vs.getRequestQueue();
 
