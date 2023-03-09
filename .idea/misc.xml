@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/alk_navigation_view_item.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/awa_navigation_view_item.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/custom_alert.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/custom_input.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/custom_input_2.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/custom_input_3.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/custom_input_alk.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/custom_input_awa.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/custom_input_error.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/efecto_sombra.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/efecto_sombra_alk.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/efecto_sombra_awa.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ghost_button.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ghost_button_2.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ghost_button_3.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ghost_button_alk.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ghost_button_awa.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ic_baseline_qr_code_scanner_24.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ic_launcher_background.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ic_menu_camera.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/item_list_estilo.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/item_list_rec_amarillo.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/item_list_rec_amarillo_izq.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/item_list_rec_azul.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/item_list_rec_verde.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/item_vale.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/normal_blue_button.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/normal_green_button.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/normal_red_button.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/qr_button.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/rectangulo_amarillo.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/side_nav_bar.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/side_nav_bar_awa.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/switch_thumb_selector.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/switch_track_selector.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/drawable/tanques_navigation_view_item.xml" value="0.41328125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/activity_menu_principal.xml" value="0.2" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/activity_navigation.xml" value="0.36626344086021506" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/activity_splash.xml" value="0.36626344086021506" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/app_bar_main.xml" value="0.3595430107526882" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/config_fragment.xml" value="0.32594086021505375" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/content_main.xml" value="0.3595430107526882" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/entrada_awa_fragment.xml" value="0.176" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/entrada_fragment.xml" value="0.36626344086021506" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/historial_awa_fragment.xml" value="0.3595430107526882" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/historial_fragment.xml" value="0.3595430107526882" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/historial_voucher_fragment.xml" value="0.3125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/item_historial_alk.xml" value="0.32594086021505375" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/item_historial_awa.xml" value="0.264" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/item_list.xml" value="0.34610215053763443" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/item_vale.xml" value="0.3528225806451613" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/item_vale_alk.xml" value="0.3709677419354839" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/item_vale_awa.xml" value="0.264" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/item_voucher.xml" value="0.4" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/menu_awa_fragment.xml" value="0.176" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/menu_fragment.xml" value="0.152" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/nav_header_main.xml" value="0.3595430107526882" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/salida_awa_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/salida_fragment.xml" value="0.36626344086021506" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/layout/voucher_registro_fragment.xml" value="0.3125" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/menu/activity_main_drawer.xml" value="0.3890625" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/menu/navigation.xml" value="0.3890625" />
+        <entry key="..\:/Users/Desarrollo/appcombugasnueva/app/src/main/res/mipmap-anydpi-v26/ic_app_inventarios_combugas_round.xml" value="0.2755208333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

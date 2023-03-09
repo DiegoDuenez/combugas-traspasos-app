@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_menu">
+
+    <fragment
+        android:id="@+id/nav_inventario"
+        android:name="com.example.app_combugas_nueva.ui.inventario.InventarioFragment"
+        android:label="Inventario NULL"
+        tools:layout="@layout/inventario_fragment" />
+
+    <fragment
+        android:id="@+id/nav_entrada"
+        android:name="com.example.app_combugas_nueva.ui.entrada.EntradaFragment"
+        android:label="Entrada"
+        tools:layout="@layout/entrada_fragment" >
+        <action
+            android:id="@+id/action_nav_entrada_to_nav_inventario"
+            app:destination="@id/nav_inventario" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_salida"
+        android:name="com.example.app_combugas_nueva.ui.salida.SalidaFragment"
+        android:label="Salida"
+        tools:layout="@layout/salida_fragment" />
+
+   <fragment
+       android:id="@+id/nav_historial"
+       android:name="com.example.app_combugas_nueva.ui.historial.HistorialFragment"
+       android:label="Historial"
+       tools:layout="@layout/historial_fragment"
+       />
+
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.example.app_combugas_nueva.ui.menu.MenuFragment"
+        android:label="Inventario Tanques"
+        tools:layout="@layout/menu_fragment"></fragment>
+
+    <!--====== SECCION AWA =======-->
+
+    <fragment
+        android:id="@+id/nav_entrada_awa"
+        android:name="com.example.app_combugas_nueva.awa.entrada.EntradaAwaFragment"
+        android:label="Entrada"
+        tools:layout="@layout/entrada_awa_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_menu_awa"
+        android:name="com.example.app_combugas_nueva.awa.menu.MenuAwaFragment"
+        android:label="Inventario Garrafones"
+        tools:layout="@layout/menu_awa_fragment"></fragment>
+
+    <fragment
+        android:id="@+id/nav_salida_awa"
+        android:name="com.example.app_combugas_nueva.awa.salida.SalidaAwaFragment"
+        android:label="Salida"
+        tools:layout="@layout/salida_awa_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_historial_awa"
+        android:name="com.example.app_combugas_nueva.awa.historial.HistorialAwaFragment"
+        android:label="Historial"
+        tools:layout="@layout/historial_awa_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_config_awa"
+        android:name="com.example.app_combugas_nueva.awa.configuracion.ConfigFragment"
+        android:label="Configuración"
+        tools:layout="@layout/config_fragment">
+    </fragment>
+
+    <!--====== SECCION VOUCHERS =======-->
+
+    <fragment
+        android:id="@+id/nav_vouchers_registro"
+        android:name="com.example.app_combugas_nueva.vouchers.registro.VoucherRegistroFragment"
+        android:label="Registro"
+        tools:layout="@layout/voucher_registro_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_historial_vouchers"
+        android:name="com.example.app_combugas_nueva.vouchers.historial.HistorialVoucherFragment"
+        android:label="Historial"
+        tools:layout="@layout/historial_voucher_fragment">
+    </fragment>
+
+
+</navigation>

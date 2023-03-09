@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single" android:id="@+id/grupo_tanques">
+        <item
+            android:id="@+id/nav_menu"
+            android:title="Inventario"
+            />
+        <item
+            android:id="@+id/nav_historial"
+            android:title="Historial" />
+        <item
+            android:id="@+id/nav_menu_principal"
+            android:title="Menú principal" />
+        <item
+            android:id="@+id/nav_cerrar_sesion"
+            android:title="Cerrar sesión" />
+        <!-- AWA -->
+        <item
+            android:id="@+id/nav_menu_awa"
+            android:title="Inventario"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/nav_historial_awa"
+            android:title="Historial" />
+        <item
+            android:id="@+id/nav_menu_principal_awa"
+            android:title="Menú principal" />
+
+        <item
+            android:id="@+id/nav_cerrar_sesion_awa"
+            android:title="Cerrar sesión" />
+
+        <!-- VOUCHERS -->
+        <item
+            android:id="@+id/nav_vouchers_registro"
+            android:title="Registro"
+            />
+
+        <item
+            android:id="@+id/nav_historial_vouchers"
+            android:title="Historial"
+            />
+
+        <item
+            android:id="@+id/nav_menu_principal_vouchers"
+            android:title="Menú principal" />
+
+        <item
+            android:id="@+id/nav_cerrar_sesion_vouchers"
+            android:title="Cerrar sesión" />
+
+
+    </group>
+
+    <!--<group android:id="@+id/grupo_awa"
+        android:visible="false"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu_awa"
+            android:title="Menú principal AWA"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/nav_historial_awa"
+            android:title="Historial" />
+        <item
+            android:id="@+id/nav_menu_principal_awa"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_cerrar_sesion_awa"
+            android:title="Cerrar sesión" />
+    </group>-->
+</menu>

@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Appcombugasnueva" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorOnPrimary">#28201d</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#28201d</item>
+        <item name="colorSecondaryVariant">#28201d</item>
+        <item name="colorOnSecondary">#28201d</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Appcombugasnueva.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">#28201d</item>
+        <item name="colorAccent">#28201d</item>
+    </style>
+
+    <style name="DrawerVBage_ArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">#28201d</item>
+    </style>
+
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">#28201d</item>
+    </style>
+
+    <style name="Theme.Appcombugasnueva.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">#28201d</item>
+        <item name="colorAccent">#28201d</item>
+        <item name="android:textColor">#28201d</item>
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+    </style>
+
+    <style name="Theme.Appcombugasnueva.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">#28201d</item>
+        <item name="colorAccent">#28201d</item>
+        <item name="android:textColor">#28201d</item>
+    </style>
+
+</resources>
