@@ -387,13 +387,6 @@ public class NavigationActivity extends AppCompatActivity {
 
         }
 
-
-
-
-
-
-
-
     }
 
     @Override
