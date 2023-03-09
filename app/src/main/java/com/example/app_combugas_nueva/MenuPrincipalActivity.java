@@ -30,6 +30,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Vibrator;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
@@ -104,6 +105,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     //private  Alert alerta;
     private String numeroCelular;
 
+    private String IMEI = "";
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,13 +143,17 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         this.permisoUbicacion = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION);
         this.permisoUbicacionFine = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.ACCESS_FINE_LOCATION);
-        //this.permisoReadStorage = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        //this.permisoWriteStorage = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        //this.permisoTelefono = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.READ_PHONE_STATE);
+        this.permisoTelefono = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.READ_PHONE_STATE);
 
-        if (this.permisoUbicacion != PackageManager.PERMISSION_GRANTED && this.permisoUbicacionFine != PackageManager.PERMISSION_GRANTED ) {
-            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 100);
+        if (this.permisoUbicacion != PackageManager.PERMISSION_GRANTED
+                && this.permisoUbicacionFine != PackageManager.PERMISSION_GRANTED ) {
             Toast.makeText(getApplicationContext(), "La app no tiene los permisos para acceder a la ubicación.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(this.permisoTelefono != PackageManager.PERMISSION_GRANTED){
+            finish();
+            Toast.makeText(getApplicationContext(), "La app no tiene los permisos para acceder al celular.", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -179,12 +186,9 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         }
 
+        IMEI = getDeviceId(this);
 
-
-
-
-
-
+        Log.d("IMEI", IMEI);
 
         btnTanques.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("MissingPermission")
@@ -239,6 +243,37 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public static String getDeviceId(Context context) {
+
+        String deviceId;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+        {
+            deviceId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+        } else {
+            final TelephonyManager mTelephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (context.checkSelfPermission(Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+                    return "";
+                }
+            }
+            assert mTelephony != null;
+            if (mTelephony.getDeviceId() != null)
+            {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                {
+                    deviceId = mTelephony.getImei();
+                }else {
+                    deviceId = mTelephony.getDeviceId();
+                }
+            } else {
+                deviceId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+            }
+        }
+        Log.d("deviceId", deviceId);
+        return deviceId;
     }
 
     public void obtenerEstacionActual(Double latitud, Double longitud){

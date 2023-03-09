@@ -65,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
     private Button btnIniciarSesion;
     private TextView textViewAño, textViewVersion;
     private AlertProgress alertaProgress;
-    private int permisoUbicacionFine, permisoUbicacion, permisoWriteStorage, permisoReadStorage, permisoTelefono, ACTIVITY_REQUEST_CODE = 123;
+    public int permisoUbicacionFine, permisoUbicacion, permisoWriteStorage, permisoReadStorage, permisoTelefono,
+            CODIGO_PERMISO_UBICACION = 555, CODIGO_PERMISO_TELEFONO = 666;
+    private final int CODIGO_PERMISOS = 777;
     private boolean isFastConnection, isConnectedMobile;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -90,14 +92,18 @@ public class MainActivity extends AppCompatActivity {
 
         this.permisoUbicacion = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION);
         this.permisoUbicacionFine = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION);
-        //this.permisoReadStorage = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        //this.permisoWriteStorage = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        this.permisoTelefono = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_PHONE_STATE);
 
-        if (this.permisoUbicacion != PackageManager.PERMISSION_GRANTED && this.permisoUbicacionFine != PackageManager.PERMISSION_GRANTED){
-            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, this.ACTIVITY_REQUEST_CODE);
-            Toast.makeText(getApplicationContext(),"La app necesita los permisos de ubicación.", Toast.LENGTH_SHORT).show();
-            return;
+        if (this.permisoUbicacion != PackageManager.PERMISSION_GRANTED
+                || this.permisoUbicacionFine != PackageManager.PERMISSION_GRANTED
+                || this.permisoTelefono != PackageManager.PERMISSION_GRANTED
+        ){
+            requestPermissions(new String[]{
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.READ_PHONE_STATE}, this.CODIGO_PERMISOS);
         }
+
 
         this.editTextNumeroEmpleado = findViewById(R.id.editTextNumeroEmpleado);
         this.btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
@@ -204,17 +210,47 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (requestCode == ACTIVITY_REQUEST_CODE){
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                finish();
-                overridePendingTransition(0, 0);
-                startActivity(getIntent());
-                overridePendingTransition(0, 0);
+        switch (requestCode) {
+            case CODIGO_PERMISOS:
+                if (grantResults.length > 0) {
+
+                    if(grantResults[0] != PackageManager.PERMISSION_GRANTED ||
+                            grantResults[1] != PackageManager.PERMISSION_GRANTED ||
+                            grantResults[2] != PackageManager.PERMISSION_GRANTED){
+                        finish();
+                        Toast.makeText(this, "Es necesario otorgar todos los permisos", Toast.LENGTH_SHORT).show();
+                    }
+
+                } else {
+                    finish();
+                    Toast.makeText(this, "Es necesario otorgar todos los permisos", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+        }
+
+        /*if (requestCode == CODIGO_PERMISO_UBICACION){
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED
+                   ) {
+                Toast.makeText(this, "Permiso de ubicación aprobado", Toast.LENGTH_LONG).show();
+
             } else {
-                Toast.makeText(this, "Permiso denegado", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Permiso de ubicación denegado", Toast.LENGTH_LONG).show();
                 finish();
             }
         }
+
+        if(requestCode == CODIGO_PERMISO_TELEFONO){
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED
+            ) {
+                Toast.makeText(this, "Permiso de celular aprobado", Toast.LENGTH_LONG).show();
+
+            } else {
+                Toast.makeText(this, "Permiso de celular denegado", Toast.LENGTH_LONG).show();
+                finish();
+            }
+
+        }*/
     }
 
     public void iniciarSesion() {

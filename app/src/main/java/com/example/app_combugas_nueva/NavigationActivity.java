@@ -173,6 +173,7 @@ public class NavigationActivity extends AppCompatActivity {
             navigationView.getMenu().getItem(11).setVisible(false);
             navigationView.getMenu().getItem(12).setVisible(false);
             navigationView.getMenu().getItem(13).setVisible(false);
+            navigationView.getMenu().getItem(14).setVisible(false);
 
             navigationView.setNavigationItemSelectedListener(item ->{
                 switch (item.getItemId()){
@@ -241,6 +242,7 @@ public class NavigationActivity extends AppCompatActivity {
             navigationView.getMenu().getItem(11).setVisible(false);
             navigationView.getMenu().getItem(12).setVisible(false);
             navigationView.getMenu().getItem(13).setVisible(false);
+            navigationView.getMenu().getItem(14).setVisible(false);
 
             navigationView.setNavigationItemSelectedListener(item ->{
                 switch (item.getItemId()){
@@ -304,6 +306,7 @@ public class NavigationActivity extends AppCompatActivity {
             navigationView.getMenu().getItem(11).setVisible(false);
             navigationView.getMenu().getItem(12).setVisible(true);
             navigationView.getMenu().getItem(13).setVisible(true);
+            navigationView.getMenu().getItem(14).setVisible(true);
 
             navigationView.setNavigationItemSelectedListener(item ->{
                 switch (item.getItemId()){
@@ -314,7 +317,7 @@ public class NavigationActivity extends AppCompatActivity {
                     case R.id.nav_menu_principal_yelow:
                         finish();
                         break;
-                    case R.id.nav_cerrar_sesion:
+                    case R.id.nav_cerrar_sesion_yelow:
                         Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_LONG).show();
                         Intent iCerrarSesion = new Intent(NavigationActivity.this, MainActivity.class);
                         startActivity(iCerrarSesion);
