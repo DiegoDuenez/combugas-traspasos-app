@@ -59,8 +59,6 @@ public class InventarioFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-
-
         inventarioViewModel =
                 new ViewModelProvider(InventarioFragment.this).get(InventarioViewModel.class);
         View root = inflater.inflate(R.layout.inventario_fragment, container, false);
@@ -81,7 +79,7 @@ public class InventarioFragment extends Fragment {
     public void getEstacion(String id_estacion){
 
         //apiUrl = url.getUrl() + "estaciones/index.php";
-        String url = URL.URL_ESTACIONES + "?id_estacion=" +id_estacion;
+        String url = URL.URL_ESTACIONES + "?id_estacion=" +id_estacion+"&funcion=";
         vs = VolleyS.getInstance(getContext());
         requestQueue = vs.getRequestQueue();
 

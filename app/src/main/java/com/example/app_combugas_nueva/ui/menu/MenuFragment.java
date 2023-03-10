@@ -78,10 +78,6 @@ public class MenuFragment extends Fragment {
             estacion = getArguments().getString("id_estacion");
             empleado = getArguments().getString("id_empleado");
             tipo_empleado = getArguments().getString("tipo_empleado");
-            /*precio_30 = getArguments().getString("precio_30");
-            precio_45 = getArguments().getString("precio_45");*/
-            //Toast.makeText(getContext(), "FLAG " + estacion, Toast.LENGTH_SHORT).show();
-
             getEstacion(estacion);
         }
 

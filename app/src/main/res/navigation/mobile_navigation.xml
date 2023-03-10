@@ -89,10 +89,18 @@
 
     <fragment
         android:id="@+id/nav_inventario_yelow"
-        android:name="com.example.app_combugas_nueva.awa.salida.SalidaAwaFragment"
-        android:label="Recarga yelow"
-        tools:layout="@layout/salida_awa_fragment">
+        android:name="com.example.app_combugas_nueva.yelow.inventario.InventarioYelowFragment"
+        android:label="Inventario"
+        tools:layout="@layout/fragment_inventario_yelow">
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_recarga_yelow"
+        android:name="com.example.app_combugas_nueva.yelow.recarga.RecargaYelowFragment"
+        android:label="Recarga"
+        tools:layout="@layout/fragment_recarga_yelow">
+    </fragment>
+
 
 
     <!--====== SECCION VOUCHERS =======-->

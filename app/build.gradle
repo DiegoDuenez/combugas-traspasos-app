@@ -52,5 +52,7 @@ dependencies {
     implementation 'com.google.zxing:core:3.3.0'
     // SCREENSHOTS
     implementation 'com.jraska:falcon:2.2.0'
+    // VERTICAL SEEKBAR
+    implementation 'com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0'
 
 }

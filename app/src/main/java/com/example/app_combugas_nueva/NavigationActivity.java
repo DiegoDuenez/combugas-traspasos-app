@@ -282,10 +282,10 @@ public class NavigationActivity extends AppCompatActivity {
 
             imageView = navigationView.getHeaderView(0).findViewById(R.id.imageView);
             textViewMenu = navigationView.getHeaderView(0).findViewById(R.id.textViewHeader);
-            imageView.setImageDrawable(getResources().getDrawable(R.drawable.combu_icon, getApplicationContext().getTheme()));
-            navigationView.getHeaderView(0).setBackgroundColor(getResources().getColor(R.color.blueLight2Yel));
+            imageView.setImageDrawable(getResources().getDrawable(R.drawable.yelow, getApplicationContext().getTheme()));
+            navigationView.getHeaderView(0).setBackgroundColor(getResources().getColor(R.color.blueYelow));
             textViewMenu.setText("Yelow");
-            toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blueLight2Yel));
+            toolbar.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.blueYelow));
             navigationView.setItemBackground(getResources().getDrawable(R.drawable.yelow_navigation_view_item));
             navigationView.setItemTextColor(ColorStateList.valueOf(getResources().getColor(R.color.black)));
             navController.navigate(R.id.nav_menu_yelow, bundleInit);
@@ -410,6 +410,14 @@ public class NavigationActivity extends AppCompatActivity {
                 }
                 else{
                     navController.navigate(R.id.nav_menu_awa, bundleInit);
+                }
+            }
+            else if(tipo.equals("yelow")){
+                if(CurrentFragment.currentFragment.equals("NAV_MENU_YELOW")){
+                    finish();
+                }
+                else{
+                    navController.navigate(R.id.nav_menu_yelow, bundleInit);
                 }
             }
             else if(tipo.equals("voucher")){
