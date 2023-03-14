@@ -31,8 +31,10 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-
-                if(checkIfLocationOpened()){
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                /*if(checkIfLocationOpened()){
                     Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
@@ -50,7 +52,7 @@ public class SplashActivity extends AppCompatActivity {
                     AlertDialog dialog = alerta.create();
                     dialog.show();
                     dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.red));
-                }
+                }*/
             }
         }, 1000);
     }

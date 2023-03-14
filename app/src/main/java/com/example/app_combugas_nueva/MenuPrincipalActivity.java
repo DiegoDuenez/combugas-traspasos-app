@@ -99,7 +99,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     private String id_empleado;
     private String nombre_empleado;
     private String tipo_empleado;
-    private String usa_gps;
+    private String uso_gps;
     private String precio_tanque_30 = "0", precio_tanque_45 = "0" , precio_awa, precio_alk, precio_six_awa, precio_six_alk;
     private AlertProgress alertaProgress;
     //private  Alert alerta;
@@ -139,7 +139,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         id_estacion_original = empleadoLogeado.getId_estacion();
         nombre_empleado = empleadoLogeado.getNombre();
         tipo_empleado = empleadoLogeado.getTipo_empleado();
-        usa_gps = empleadoLogeado.getUsa_gps();
+        uso_gps = empleadoLogeado.getUso_gps();
 
         this.permisoUbicacion = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION);
         this.permisoUbicacionFine = ActivityCompat.checkSelfPermission(MenuPrincipalActivity.this, Manifest.permission.ACCESS_FINE_LOCATION);
@@ -159,8 +159,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         alertaProgress.content("Cargando estación", "Por favor espere.").show(false);
 
-        if(usa_gps.equals("0")){
-            // PRUEBAS
+        if(uso_gps.equals("0")){
+            // SIN GPS
             txtViewEstacion.setText("Estación: " + empleadoLogeado.getNombre_estacion());
             txtViewEmpleado.setText("Empleado: " + empleadoLogeado.getNombre());
             if(!empleadoLogeado.getNombre_estacion().equals("")){
@@ -170,7 +170,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         }
         else{
-            //PRODUCCION
+            // CON GPS*/
             locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 10, new Listener());
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, new Listener());
@@ -179,6 +179,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                 txtViewEstacion.setText("Estación: " + empleadoLogeado.getNombre_estacion());
                 txtViewEmpleado.setText("Empleado: " + empleadoLogeado.getNombre());
+                alertaProgress.close();
             }
             if (location != null) {
                 handleLatLng(location.getLatitude(), location.getLongitude());
@@ -189,6 +190,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         IMEI = getDeviceId(this);
 
         Log.d("IMEI", IMEI);
+
+        compararImei(IMEI);
 
         btnTanques.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("MissingPermission")
@@ -242,6 +245,49 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 startActivity(iTanques);
             }
         });
+
+    }
+
+    public void compararImei(String imei){
+
+        alertaProgress.content("Validando dispositivo", "Por favor espere.").show(false);
+
+        String url = URL.URL_IMEI + "?imei=" + imei;
+
+        vs = VolleyS.getInstance(this.getApplicationContext());
+        requestQueue = vs.getRequestQueue();
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        try {
+                            JSONArray data = (JSONArray) response.get("imei");
+
+                            if(data.length() <= 0){
+
+                                Toast.makeText(MenuPrincipalActivity.this, "Este dispositivo no se encuentra registrado", Toast.LENGTH_SHORT).show();
+                                finish();
+                            }
+                            else{
+                                alertaProgress.close();
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        });
+        requestQueue.add(request);
 
     }
 

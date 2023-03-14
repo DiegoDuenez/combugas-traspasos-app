@@ -287,7 +287,9 @@ public class MainActivity extends AppCompatActivity {
                             String id_estacion = mJsonObject.getString("id_estacion");
                             String nombre_estacion = mJsonObject.getString("nombre_estacion");
                             String tipo_empleado = mJsonObject.getString("idtipo_empleado");
-                            Empleado empleado = new Empleado(id_empleado, nombre, numero_empleado, id_estacion, nombre_estacion, tipo_empleado);
+                            String uso_gps = mJsonObject.getString("uso_gps");
+
+                            Empleado empleado = new Empleado(id_empleado, nombre, numero_empleado, id_estacion, nombre_estacion, tipo_empleado, uso_gps);
                             Intent intent = new Intent(MainActivity.this, MenuPrincipalActivity.class);
                             intent.putExtra("empleado_logeado", empleado);
                             alertaProgress.close();

@@ -13,25 +13,26 @@ public class Empleado implements Serializable {
     private String status;
     private String nombre_estacion;
 
-    private String usa_gps = "0";
+    private String uso_gps;
 
     private String tipo_empleado;
 
-    public Empleado(String id_empleado, String nombre, String numero_empleado, String id_estacion, String nombre_estacion, String tipo_empleado) {
+    public Empleado(String id_empleado, String nombre, String numero_empleado, String id_estacion, String nombre_estacion, String tipo_empleado, String uso_gps) {
         this.id_empleado = id_empleado;
         this.nombre = nombre;
         this.numero_empleado = numero_empleado;
         this.id_estacion = id_estacion;
         this.nombre_estacion = nombre_estacion;
         this.tipo_empleado = tipo_empleado;
+        this.uso_gps = uso_gps;
     }
 
-    public String getUsa_gps() {
-        return usa_gps;
+    public String getUso_gps() {
+        return uso_gps;
     }
 
-    public void setUsa_gps(String usa_gps) {
-        this.usa_gps = usa_gps;
+    public void setUso_gps(String usa_gps) {
+        this.uso_gps = usa_gps;
     }
 
     public String getId_empleado() {
